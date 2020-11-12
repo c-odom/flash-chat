@@ -25,7 +25,7 @@ class WelcomeViewController: UIViewController {
     func setupTitleAnimationUsingLoop() {
         var charIndex = 0.0
         titleLabel.text = ""
-        let titleText = "⚡️FlashChat"
+        let titleText = K.appName
         for letter in titleText {
             Timer.scheduledTimer(withTimeInterval: 0.1 * charIndex, repeats: false) {[weak self] _ in
                 self?.titleLabel.text?.append(letter)

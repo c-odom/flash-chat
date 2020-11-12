@@ -3,10 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		30307938255D29450087212B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30307937255D29450087212B /* Constants.swift */; };
+		3030794E255D2AE80087212B /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3030794D255D2AE80087212B /* Message.swift */; };
+		30307953255D2E6A0087212B /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30307951255D2E6A0087212B /* MessageCell.swift */; };
+		30307954255D2E6A0087212B /* MessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30307952255D2E6A0087212B /* MessageCell.xib */; };
 		3059E6C8255BDC4100D5F915 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3059E6C7255BDC4100D5F915 /* AppDelegate.swift */; };
 		3059E6CA255BDC4100D5F915 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3059E6C9255BDC4100D5F915 /* SceneDelegate.swift */; };
 		3059E6CC255BDC4100D5F915 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3059E6CB255BDC4100D5F915 /* WelcomeViewController.swift */; };
@@ -16,10 +20,15 @@
 		3059E6E2255BEA0400D5F915 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3059E6E1255BEA0400D5F915 /* RegisterViewController.swift */; };
 		3059E6E5255BEB1F00D5F915 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3059E6E4255BEB1F00D5F915 /* LoginViewController.swift */; };
 		3059E6E9255BEE1E00D5F915 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3059E6E8255BEE1E00D5F915 /* ChatViewController.swift */; };
+		30CD4F0E255CDDEB00D8A7E3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 30CD4F0D255CDDEB00D8A7E3 /* GoogleService-Info.plist */; };
 		F6FC3E44834A9100DF22D9EF /* Pods_flash_chat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36B3FEFF7ABBE34D6CADEE43 /* Pods_flash_chat.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		30307937255D29450087212B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		3030794D255D2AE80087212B /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		30307951255D2E6A0087212B /* MessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
+		30307952255D2E6A0087212B /* MessageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageCell.xib; sourceTree = "<group>"; };
 		3059E6C4255BDC4100D5F915 /* flash-chat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "flash-chat.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3059E6C7255BDC4100D5F915 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3059E6C9255BDC4100D5F915 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -31,6 +40,7 @@
 		3059E6E1255BEA0400D5F915 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		3059E6E4255BEB1F00D5F915 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = "flash-chat/Controller/LoginViewController.swift"; sourceTree = SOURCE_ROOT; };
 		3059E6E8255BEE1E00D5F915 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		30CD4F0D255CDDEB00D8A7E3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		36B3FEFF7ABBE34D6CADEE43 /* Pods_flash_chat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_flash_chat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		408B00E39F34D9FB3D1AA145 /* Pods-flash-chat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-flash-chat.debug.xcconfig"; path = "Target Support Files/Pods-flash-chat/Pods-flash-chat.debug.xcconfig"; sourceTree = "<group>"; };
 		B313E4746A79A56C5B81145A /* Pods-flash-chat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-flash-chat.release.xcconfig"; path = "Target Support Files/Pods-flash-chat/Pods-flash-chat.release.xcconfig"; sourceTree = "<group>"; };
@@ -48,6 +58,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3030794C255D2ADD0087212B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3030794D255D2AE80087212B /* Message.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		3059E6BB255BDC4100D5F915 = {
 			isa = PBXGroup;
 			children = (
@@ -69,6 +87,8 @@
 		3059E6C6255BDC4100D5F915 /* flash-chat */ = {
 			isa = PBXGroup;
 			children = (
+				3030794C255D2ADD0087212B /* Model */,
+				30CD4F0D255CDDEB00D8A7E3 /* GoogleService-Info.plist */,
 				3059E6DD255BDC8200D5F915 /* Controller */,
 				3059E6DC255BDC7200D5F915 /* View */,
 				3059E6C7255BDC4100D5F915 /* AppDelegate.swift */,
@@ -76,6 +96,7 @@
 				3059E6D0255BDC4500D5F915 /* Assets.xcassets */,
 				3059E6D2255BDC4500D5F915 /* LaunchScreen.storyboard */,
 				3059E6D5255BDC4500D5F915 /* Info.plist */,
+				30307937255D29450087212B /* Constants.swift */,
 			);
 			path = "flash-chat";
 			sourceTree = "<group>";
@@ -84,6 +105,8 @@
 			isa = PBXGroup;
 			children = (
 				3059E6CD255BDC4100D5F915 /* Main.storyboard */,
+				30307951255D2E6A0087212B /* MessageCell.swift */,
+				30307952255D2E6A0087212B /* MessageCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -105,7 +128,6 @@
 				408B00E39F34D9FB3D1AA145 /* Pods-flash-chat.debug.xcconfig */,
 				B313E4746A79A56C5B81145A /* Pods-flash-chat.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -176,7 +198,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30307954255D2E6A0087212B /* MessageCell.xib in Resources */,
 				3059E6D4255BDC4500D5F915 /* LaunchScreen.storyboard in Resources */,
+				30CD4F0E255CDDEB00D8A7E3 /* GoogleService-Info.plist in Resources */,
 				3059E6D1255BDC4500D5F915 /* Assets.xcassets in Resources */,
 				3059E6CF255BDC4100D5F915 /* Main.storyboard in Resources */,
 			);
@@ -235,8 +259,11 @@
 				3059E6C8255BDC4100D5F915 /* AppDelegate.swift in Sources */,
 				3059E6CA255BDC4100D5F915 /* SceneDelegate.swift in Sources */,
 				3059E6E5255BEB1F00D5F915 /* LoginViewController.swift in Sources */,
+				30307938255D29450087212B /* Constants.swift in Sources */,
+				3030794E255D2AE80087212B /* Message.swift in Sources */,
 				3059E6E9255BEE1E00D5F915 /* ChatViewController.swift in Sources */,
 				3059E6E2255BEA0400D5F915 /* RegisterViewController.swift in Sources */,
+				30307953255D2E6A0087212B /* MessageCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -385,12 +412,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9SM882PEZ9;
 				INFOPLIST_FILE = "flash-chat/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.jayz.flash-chat";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jayzwalker.flashChat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -404,12 +432,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9SM882PEZ9;
 				INFOPLIST_FILE = "flash-chat/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.jayz.flash-chat";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jayzwalker.flashChat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

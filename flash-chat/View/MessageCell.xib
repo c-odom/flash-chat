@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="71" id="KGk-i7-Jjw" customClass="MessageCell" customModule="flash_chat" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="342" height="71"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="342" height="71"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="2Tc-LN-Sc1">
+                        <rect key="frame" x="10" y="10" width="322" height="50"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XpY-XT-nUl">
+                                <rect key="frame" x="0.0" y="0.0" width="262" height="50"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xpA-mh-ZZf">
+                                        <rect key="frame" x="10" y="10" width="242" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" name="BrandLightPurple"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" name="BrandPurple"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="xpA-mh-ZZf" secondAttribute="bottom" constant="10" id="G5v-Pr-MhR"/>
+                                    <constraint firstItem="xpA-mh-ZZf" firstAttribute="leading" secondItem="XpY-XT-nUl" secondAttribute="leading" constant="10" id="GBb-7Q-0CS"/>
+                                    <constraint firstItem="xpA-mh-ZZf" firstAttribute="top" secondItem="XpY-XT-nUl" secondAttribute="top" constant="10" id="gRb-jI-CTn"/>
+                                    <constraint firstAttribute="trailing" secondItem="xpA-mh-ZZf" secondAttribute="trailing" constant="10" id="nGt-63-nC8"/>
+                                </constraints>
+                            </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MeAvatar" translatesAutoresizingMaskIntoConstraints="NO" id="eXQ-hY-E27">
+                                <rect key="frame" x="282" y="0.0" width="40" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="6c1-9z-AsW"/>
+                                    <constraint firstAttribute="height" constant="40" id="A3h-7J-AGx"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="2Tc-LN-Sc1" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="VuK-ID-9Vt"/>
+                    <constraint firstAttribute="trailing" secondItem="2Tc-LN-Sc1" secondAttribute="trailing" constant="10" id="jBP-uA-WnV"/>
+                    <constraint firstItem="2Tc-LN-Sc1" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="kB7-LY-HbR"/>
+                    <constraint firstAttribute="bottom" secondItem="2Tc-LN-Sc1" secondAttribute="bottom" constant="10" id="kBD-hR-EtD"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="label" destination="xpA-mh-ZZf" id="hSb-wg-110"/>
+                <outlet property="messageBubble" destination="XpY-XT-nUl" id="CZP-AU-UHS"/>
+                <outlet property="rightImageView" destination="eXQ-hY-E27" id="UD4-Wz-t3T"/>
+            </connections>
+            <point key="canvasLocation" x="355" y="105"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="MeAvatar" width="36" height="36"/>
+        <namedColor name="BrandLightPurple">
+            <color red="0.98000001907348633" green="0.9649999737739563" blue="0.99599999189376831" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="BrandPurple">
+            <color red="0.67500001192092896" green="0.43500000238418579" blue="0.9179999828338623" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

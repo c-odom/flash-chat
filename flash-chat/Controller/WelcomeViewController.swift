@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CLTypingLabel
 
 class WelcomeViewController: UIViewController {
 
@@ -16,6 +17,25 @@ class WelcomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        setupTitleAnimationUsingLoop()
+//        setupTitleAnimationUsingCLTypeLabel()
+    }
+    
+    //MARK: - Functions
+    func setupTitleAnimationUsingLoop() {
+        var charIndex = 0.0
+        titleLabel.text = ""
+        let titleText = "⚡️FlashChat"
+        for letter in titleText {
+            Timer.scheduledTimer(withTimeInterval: 0.1 * charIndex, repeats: false) {[weak self] _ in
+                self?.titleLabel.text?.append(letter)
+            }
+            charIndex += 1
+        }
+    }
+    
+    func setupTitleAnimationUsingCLTypeLabel() {
+        titleLabel.text = "⚡️FlashChat"
     }
 
 

@@ -13,6 +13,16 @@ class WelcomeViewController: UIViewController {
     //MARK: - IBOutlets
     @IBOutlet weak var titleLabel: UILabel!
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        toggleNavigationBarHidden(true)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        toggleNavigationBarHidden(false)
+    }
+    
     //MARK: - Life Cycles
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,6 +32,9 @@ class WelcomeViewController: UIViewController {
     }
     
     //MARK: - Functions
+    func toggleNavigationBarHidden(_ hidden: Bool) {
+        navigationController?.isNavigationBarHidden = hidden
+    }
     func setupTitleAnimationUsingLoop() {
         var charIndex = 0.0
         titleLabel.text = ""

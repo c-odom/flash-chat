@@ -13,6 +13,7 @@ class MessageCell: UITableViewCell {
     @IBOutlet weak var messageBubble: UIView!
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var rightImageView: UIImageView!
+    @IBOutlet weak var leftImageView: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -24,6 +25,15 @@ class MessageCell: UITableViewCell {
 
         // Configure the view for the selected state
         messageBubble.layer.cornerRadius = messageBubble.frame.size.height / 5
+    }
+    
+    //MARK: - Functions
+    func setupMessageCell(fromMe: Bool, message: String) {
+        leftImageView.isHidden = fromMe
+        rightImageView.isHidden = !fromMe
+        messageBubble.backgroundColor = UIColor(named: fromMe ? K.BrandColors.purple : K.BrandColors.lightPurple)
+        label.textColor = UIColor(named: fromMe ? K.BrandColors.lightPurple : K.BrandColors.purple)
+        label.text = message
     }
     
 }
